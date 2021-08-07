@@ -1,12 +1,5 @@
 package uz.pet.utils;
 
-/********************************************
- *   @author Bazarbayev_Mansurjon
- *   @date 14.01.2020
- *   @project VisaSubscriberService
- *   @package uz.hamkor.visa.utils
- ********************************************/
-
 import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.conn.ssl.TrustAllStrategy;
 import org.apache.http.ssl.SSLContexts;
@@ -209,70 +202,6 @@ public class CommonUtils {
             props.load(resourceStream);
         }
     }
-
-//    public MyHttpResponse sendPostRequest(String method, String postData) throws Exception {
-//
-//        String endpoint = props.getProperty(method + ".endpoint.address");
-//
-//        CloseableHttpClient httpclient = HttpClients.custom().setSSLSocketFactory(sslConnectionSocketFactory).build();
-//        HttpPost httpPost = new HttpPost(endpoint);
-//        StringEntity myEntity = new StringEntity(postData,
-//                ContentType.create("application/pkcs7-mime", "UTF-8"));
-//        httpPost.setEntity(myEntity);
-//        RequestConfig requestConfig = RequestConfig.custom()
-//                .setSocketTimeout(Integer.parseInt(props.getProperty(method + "." + "endpoint.socket_timeout")))
-//                .setConnectTimeout(Integer.parseInt(props.getProperty(method + "." + "endpoint.connect_timeout")))
-//                .setConnectionRequestTimeout(Integer.parseInt(props.getProperty(method + "." + "endpoint.connection_request_timeout")))
-//                .setAuthenticationEnabled(true)
-//                .build();
-//        httpPost.setConfig(requestConfig);
-//
-//        httpPost.setHeader("Content-Type", "application/pkcs7-mime");
-//        CloseableHttpResponse response2 = httpclient.execute(httpPost);
-//
-//        MyHttpResponse result = new MyHttpResponse();
-//        int statuscode = response2.getStatusLine().getStatusCode();
-//        try {
-//            HttpEntity entity2 = response2.getEntity();
-//            result.setHttpStatus(statuscode);
-//            result.setResponse(EntityUtils.toString(entity2));
-//        } finally {
-//            response2.close();
-//        }
-//        return result;
-//    }
-//
-//    public MyHttpResponse sendPostRequestSSL(String method, String postData) throws Exception {
-//
-//        String endpoint = props.getProperty("endpoint.address") + "/" + method;
-//
-//        CloseableHttpClient httpclient = HttpClients.custom().setSSLSocketFactory(sslConnectionSocketFactory).build();
-//        HttpPost httpPost = new HttpPost(endpoint);
-//        StringEntity myEntity = new StringEntity(postData,
-//                ContentType.create("application/pkcs7-mime", "UTF-8"));
-//        httpPost.setEntity(myEntity);
-//        RequestConfig requestConfig = RequestConfig.custom()
-//                .setSocketTimeout(Integer.parseInt(props.getProperty("endpoint.socket_timeout")))
-//                .setConnectTimeout(Integer.parseInt(props.getProperty("endpoint.connect_timeout")))
-//                .setConnectionRequestTimeout(Integer.parseInt(props.getProperty("endpoint.connection_request_timeout")))
-//                .setAuthenticationEnabled(true)
-//                .build();
-//        httpPost.setConfig(requestConfig);
-//
-//        httpPost.setHeader("Content-Type", "application/pkcs7-mime");
-//        CloseableHttpResponse response2 = httpclient.execute(httpPost);
-//
-//        MyHttpResponse result = new MyHttpResponse();
-//        int statuscode = response2.getStatusLine().getStatusCode();
-//        try {
-//            HttpEntity entity2 = response2.getEntity();
-//            result.setHttpStatus(statuscode);
-//            result.setResponse(EntityUtils.toString(entity2));
-//        } finally {
-//            response2.close();
-//        }
-//        return result;
-//    }
 
         public SSLContext createSslCustomContext() throws Exception {
 

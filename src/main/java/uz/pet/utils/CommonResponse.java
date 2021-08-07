@@ -1,11 +1,5 @@
 package uz.pet.utils;
 
-/********************************************
- *   @author Bazarbayev_Mansurjon
- *   @date 15.01.2020
- *   @project VisaSubscriberService
- *   @package uz.hamkor.visa.responses
- ********************************************/
 public class CommonResponse {
     String httpStatus;
     String errorCode;
